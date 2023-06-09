@@ -3,8 +3,7 @@ const offersContainer = document.getElementsByClassName("offers_container")[0];
 const cards = await axios.get("https://autsorsing-backend.onrender.com/getFirstCards");
 
 
-//int index = 0;
-//foreach (var card in data.cards){...; index++;}
+
 cards.data.map((card, index) => {
   const offer = document.createElement("div");
   offer.className += "offer offer" + (index + 1);
@@ -20,7 +19,7 @@ cards.data.map((card, index) => {
   const leaveOrder = document.createElement("a");
   leaveOrder.href = "#";
   leaveOrder.classList.add("offer_submit");
-  leaveOrder.innerHTML = "�������� ������";
+  leaveOrder.innerHTML = "Оставить заявку";
   leaveOrder.id = index + 1;
 
   const offerPoints = document.createElement("ul");
