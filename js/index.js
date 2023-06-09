@@ -1,6 +1,6 @@
 const offersContainer = document.getElementsByClassName("offers_container")[0];
 
-const cards = await axios.get("http://127.0.0.1:4000/getFirstCards");
+const cards = await axios.get("https://autsorsing-backend.onrender.com/getFirstCards");
 
 
 //int index = 0;
@@ -20,7 +20,7 @@ cards.data.map((card, index) => {
   const leaveOrder = document.createElement("a");
   leaveOrder.href = "#";
   leaveOrder.classList.add("offer_submit");
-  leaveOrder.innerHTML = "Оставить заявку";
+  leaveOrder.innerHTML = "�������� ������";
   leaveOrder.id = index + 1;
 
   const offerPoints = document.createElement("ul");
@@ -53,5 +53,3 @@ open_popupButtons.forEach((button) => {
     popup.classList.add("active");
   });
 });
-
-
