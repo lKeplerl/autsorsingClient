@@ -1,6 +1,6 @@
 const main = document.getElementsByClassName("main")[0];
 
-const services = await axios.get("http://127.0.0.1:4000/getServices");
+const services = await axios.get("https://autsorsing-backend.onrender.com/getServices");
 
 services.data.map((service) => {
   const title = document.createElement("title");
