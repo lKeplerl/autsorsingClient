@@ -15,7 +15,7 @@ formBtn.addEventListener("click", (e) => {
         name: nameField.value,
         email: email.value,
       });
-    } else {
+    } else if (sessionStorage.length > 0) {
       axios.post("https://autsorsing-backend.onrender.com/leaveOrder", {
         name: nameField.value,
         email: email.value,
@@ -23,8 +23,8 @@ formBtn.addEventListener("click", (e) => {
       });
     }
 
-    sessionStorage.clear();
     alert("Заявка оставлена");
+    sessionStorage.clear();
   }else{
     alert("Пожалуйста, корректно заполните все поля")
   }
